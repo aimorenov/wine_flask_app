@@ -8,8 +8,34 @@
 
 <body>
   <div>
-    <h1>Le vin est formidable! Mais que quand c'est bon</h1>
-    <h2>Ici on t'aide à calculer un score de qualité pour ton vin</h2>
+    <h1>Le vin est formidable! Mais que quand c'est bon 🍷 🍷 🍷</h1>
+    <h2>👉 Ici on t'aide à calculer un score de qualité pour ton vin</h2>
+    <p>Pour obtenir le score de qualité d'un vin on a besoin d'une entrée .json avec les informations suivantes pour le vin à noter:
+      <ul>
+        <li>fixed acidity</li>
+        <li> volatile acidity</li>
+        <li> citric acid</li>
+        <li>residual sugar</li>
+        <li> chlorides</li>
+          <li>  free sulfur dioxide</li>
+            <li>  total sulfur dioxide</li>
+              <li>  density</li>
+                <li>  pH</li>
+                  <li>sulphates</li>
+                    <li>alcohol</li>
+                      <li>quality</li>
+      </ul>
+ 
+    </p>
+    <p> Envoie ta requete .json à l'url suivant:</p>
+    <p><a href="https://wine-flask-app-amv.herokuapp.com/predict">https://wine-flask-app-amv.herokuapp.com/predict</a></p>
+    <p>Par exemple: Obtenir les scores pour deux vins:</p>
+    <div>input_multiple = {
+      "input": [[7.0, 0.27, 0.36, 20.7, 0.045, 45.0, 170.0, 1.001, 3.0, 0.45, 8.8],
+                [5.0, 0.98, 0.32, 18.9, 0.050, 75.0, 122.0, 0.401, 3.1, 0.21, 1.2]]}</div>
+    <div>res = requests.post(url, json=input_multiple)</div>
+    <div>print(res.json())</div>
+    
   </div>
 </body>
 
